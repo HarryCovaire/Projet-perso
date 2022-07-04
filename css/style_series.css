@@ -1,0 +1,104 @@
+body {
+  /* height: 100vh; */
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  background: url(bg/fond_series.png) fixed center/cover;
+  font-family: "font-1", sans-serif;
+  color: aliceblue;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  user-select: 0;
+  box-sizing: 0;
+  font-family: Avenir, sans-serif;
+}
+
+/* Menue déroulant */
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(23, 86, 158);
+  position: sticky;
+  top: 0px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+
+nav a:hover {
+  color: orange;
+  border-bottom: 2px solid gold;
+}
+
+.sous {
+  display: none;
+  /* box-shadow: 0px 1px 2px #ccc; */
+  background-color: rgb(23, 86, 158);
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+nav > ul li:hover .sous {
+  display: block;
+}
+.sous li {
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+.sous a {
+  padding: 10px;
+  border-bottom: none;
+}
+.sous a:hover {
+  border-bottom: none;
+  background-color: RGBa(200, 200, 200, 0.1);
+}
+.deroulant > a::after {
+  content: " ▼";
+  font-size: 12px;
+}
+
+.conteneur {
+  margin: 50px 20px;
+  height: 1500px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: RGBa(23, 86, 158, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: RGBa(23, 86, 158, 1);
+}
